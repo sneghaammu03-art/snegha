@@ -1,0 +1,308 @@
+*{
+ color: #fff;
+ 
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+    
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/WhatsApp\ Image\ 2026-02-11\ at\ 9.41.21\ AM.jpeg);
+    animation: gradient 10s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradient {
+    0% {
+       background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('particles.png');
+    opacity: 0.3;
+    animation: moveParticles 20s linear infinite;
+}
+
+@keyframes moveParticles {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+header {
+    background: rgba(34, 34, 34, 0.8);
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+header h1 {
+    margin: 0;
+    justify-content: flex-start;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #77aaff;
+}
+
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color:#fff;
+}
+
+.about-content, .skills-content, .projects-content, .contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-content img {
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-content img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-content div {
+    max-width: 900px;
+    font-size: 18px;
+    font-style: normal;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.skills-content {
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.skill {
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.skill i {
+    font-size: 4em;
+    color: #444;
+    transition: color 0.3s;
+}
+
+.skill h3 {
+    margin-top: 10px;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+.skill:hover i {
+    color: #77aaff;
+}
+
+.certificates-content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.certificate {
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.certificate i {
+    font-size: 4em;
+    color: #444;
+    transition: color 0.3s;
+}
+
+.certificate h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.certificate h3 a {
+    color: #77aaff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.certificate:hover {
+    transform: scale(1.1);
+}
+
+.certificate:hover i {
+    color: #77aaff;
+}
+
+.certificate h3 a:hover {
+    color: #555;
+}
+
+
+.project {
+    margin: 20px;
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.project h3 {
+    margin: 10px 0 5px;
+}
+
+.project p {
+    color: #a7a4a4;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-content p {
+    margin: 10px 10px;
+}
+
+.contact-content a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-content a:hover {
+    color: #77aaff;
+}
+
+footer {
+    background: rgba(34, 34, 34, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 768px) 
+{
+    .skills-content {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;    
+        justify-content: center; 
+        margin: 0 auto;
+    }
+
+    .skill {
+        width: 100%;  
+        text-align: center; 
+        margin-bottom: 20px; 
+    }
+
+    .skill i {
+        font-size: 3em;
+    }
+
+    .skill h3 {
+        font-size: 1.5em; 
+    }
+
+    .header-inner h1 {
+        font-size: 11px; 
+    }
+
+    .header-inner nav ul li a {
+        font-size: 6px; 
+    }
+
+    .certificates-content {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;    
+        justify-content: center; 
+        margin: 0 auto;
+    }
+
+    .certificate {
+        width: 100%;  
+        text-align: center; 
+        margin-bottom: 20px; 
+    }
+
+    
+        
+    }
+}
